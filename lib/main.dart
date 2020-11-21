@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: Scaffold(
-        backgroundColor: Colors.tealAccent,
+        backgroundColor: Colors.teal,
         body: buildContainer(),
       ),
     );
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         children: <Widget>[
           CircleAvatar(
             radius: 50,
-            backgroundColor: Colors.redAccent,
+            backgroundColor: Colors.white,
             backgroundImage: AssetImage('images/avatar.jpeg'),
           ),
           Text(
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
             style: TextStyle(
                 fontFamily: 'Pacifico',
                 fontWeight: FontWeight.bold,
-                color: Colors.redAccent,
+                color: Colors.white,
                 fontSize: 30,
                 letterSpacing: 2.5),
           ),
@@ -44,8 +44,48 @@ class MyApp extends StatelessWidget {
             style: TextStyle(
               fontFamily: 'Source Sans Pro',
               fontWeight: FontWeight.bold,
-              color: Colors.redAccent[100],
+              color: Colors.white54,
               fontSize: 18,
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(10),
+            color: Colors.white,
+            margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+            child: Row(
+              children: <Widget>[
+                Icon(Icons.phone, color: Colors.teal),
+                SizedBox(
+                  width: 10,
+                ),
+                Text(
+                  '+38 511 3020971',
+                  style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontFamily: 'Source Sans Pro',
+                      fontSize: 16),
+                )
+              ],
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(10),
+            color: Colors.white,
+            margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+            child: Row(
+              children: <Widget>[
+                Icon(Icons.email, color: Colors.teal),
+                SizedBox(
+                  width: 10,
+                ),
+                Text(
+                  'evgenyshenet91@gmail.com',
+                  style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontFamily: 'Source Sans Pro',
+                      fontSize: 16),
+                )
+              ],
             ),
           )
         ],
