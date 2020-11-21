@@ -33,9 +33,19 @@ class MyApp extends StatelessWidget {
           Text(
             'Shenets Evgeny',
             style: TextStyle(
+                fontFamily: 'Pacifico',
+                fontWeight: FontWeight.bold,
+                color: Colors.redAccent,
+                fontSize: 30,
+                letterSpacing: 2.5),
+          ),
+          Text(
+            'FLUTTER DEVELOPER',
+            style: TextStyle(
+              fontFamily: 'Source Sans Pro',
               fontWeight: FontWeight.bold,
-              color: Colors.redAccent,
-              fontSize: 25,
+              color: Colors.redAccent[100],
+              fontSize: 18,
             ),
           )
         ],
