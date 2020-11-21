@@ -5,7 +5,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,16 +16,29 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         backgroundColor: Colors.tealAccent,
-        body: SafeArea(
-          child: Column(
-            children: <Widget>[
-              CircleAvatar(
-                radius: 50,
-                backgroundColor: Colors.redAccent,
-              )
-            ],
+        body: buildContainer(),
+      ),
+    );
+  }
+
+  SafeArea buildContainer() {
+    return SafeArea(
+      child: Column(
+        children: <Widget>[
+          CircleAvatar(
+            radius: 50,
+            backgroundColor: Colors.redAccent,
+            backgroundImage: AssetImage('images/avatar.jpeg'),
           ),
-        ),
+          Text(
+            'Shenets Evgeny',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Colors.redAccent,
+              fontSize: 25,
+            ),
+          )
+        ],
       ),
     );
   }
